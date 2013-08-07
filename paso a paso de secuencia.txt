@@ -1,0 +1,20 @@
+Secuencia basico del Sistema
+-------------------------------------------------------------------
+Nro    Actividad		usuario			contraseña
+-------------------------------------------------------------------	
+1) generar expediente   -> 	representante 		pwd:111
+2) firmar formato 	->	gerente 		pwd:111
+3) aprobar monto base   -> 	tecnicopresup 		pwd:111
+4) comprobar en pac	->	gerenteadm 		pwd:111
+5) validar datos correctos -> 	jefeul 			pwd:111
+6) verificar uit 	->	tecnicoadm 		pwd:111
+7) generar expediente y adj Solicitud->	tecnicosnp 	pwd:111
+8) aprobar solicitudCotiz ->	jefeul			pwd:111
+9) invitar proveedores	->	tecnicosnp		pwd:111
+10) enviar cuadro comparativo ->  tecnicosno		pwd:111
+11) elegir al proveedor ganador-> jefeul		pwd:111
+12) Generar Orden Compra -> 	tecnicocontable		pwd:111
+13) aprobar orden compra ->	jefeul			pwd:111
+----Fin del proceso
+
+administrador del sistema ->	adm			123
