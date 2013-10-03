@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-sep-2013 3:08:08 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.java.beans.ExpedienteCompraDTO" table="expedientecompra" catalog="bdmuni">
+        <id name="codExpediente" type="int">
+            <column name="codExpediente" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="formatoRequerimientoDTO" class="com.java.beans.FormatoRequerimientoDTO" fetch="select">
+            <column name="codFormato" not-null="true" />
+        </many-to-one>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="145" />
+        </property>
+        <property name="fecha" type="string">
+            <column name="fecha" length="10" />
+        </property>
+        <set name="ordenCompraDTOs" table="ordencompra" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="codExpediente" not-null="true" />
+            </key>
+            <one-to-many class="com.java.beans.OrdenCompraDTO" />
+        </set>
+        <set name="cuadroComparativoDTOs" table="cuadrocomparativo" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="codExpediente" not-null="true" />
+            </key>
+            <one-to-many class="com.java.beans.CuadroComparativoDTO" />
+        </set>
+        <set name="solicitudCotizacionDTOs" table="solicitudcotizacion" inverse="true" lazy="true" fetch="select" cascade="persist">
+            <key>
+                <column name="codExpediente" not-null="true" />
+            </key>
+            <one-to-many class="com.java.beans.SolicitudCotizacionDTO" />
+        </set>
+        <set name="registroFormatoExpedienteDTOs" table="registro_formatoandexpediente" inverse="true" lazy="true" fetch="select" cascade="persist">
+            <key>
+                <column name="codExpediente" />
+            </key>
+            <one-to-many class="com.java.beans.RegistroFormatoExpedienteDTO" />
+        </set>
+    </class>
+</hibernate-mapping>

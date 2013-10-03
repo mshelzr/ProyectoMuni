@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering 
+PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-catalog="bdmuni" match-name="actividades" />
+	<table-filter match-catalog="bdmuni" match-name="cuadrocomparativo" />
+	<table-filter match-catalog="bdmuni" match-name="detalle_pac" />
+	<table-filter match-catalog="bdmuni" match-name="expedientecompra" />
+	<table-filter match-catalog="bdmuni"
+		match-name="formatorequerimiento" />
+	<table-filter match-catalog="bdmuni" match-name="menu" />
+	<table-filter match-catalog="bdmuni" match-name="ordencompra" />
+	<table-filter match-catalog="bdmuni" match-name="perfil" />
+	<table-filter match-catalog="bdmuni" match-name="proveedor" />
+	<table-filter match-catalog="bdmuni"
+		match-name="registro_formatoandexpediente" />
+	<table-filter match-catalog="bdmuni" match-name="saldopresupuestal" />
+	<table-filter match-catalog="bdmuni"
+		match-name="solicitudcotizacion" />
+	<table-filter match-catalog="bdmuni"
+		match-name="solicitudcotizacion_has_proveedor" />
+	<table-filter match-catalog="bdmuni" match-name="tbauditoria" />
+	<table-filter match-catalog="bdmuni" match-name="tbusuario" />
+	<table catalog="bdmuni" name="solicitudcotizacion"
+		class="com.java.beans.SolicitudCotizacionDTO">
+		<column name="codSolicitudCotizacion" type="int"></column>
+		<column name="url"></column>
+		<column name="fecha" type="String"></column>
+		<column name="codExpediente" type="int"></column>
+	</table>
+	<table catalog="bdmuni" name="proveedor"
+		class="com.java.beans.ProveedorDTO">
+		<column name="codProveedor" type="int"></column>
+		<column name="nombre"></column>
+		<column name="ruc"></column>
+		<column name="telefono"></column>
+		<column name="correo"></column>
+	</table>
+	<table catalog="bdmuni" name="tbauditoria"
+		class="com.java.beans.AuditoriaDTO">
+		<column name="codAuditoria" type="int"></column>
+		<column name="fechaLogin" type="String"></column>
+		<column name="fechaLogout" type="String"></column>
+		<column name="usuario"></column>
+		<column name="hostname"></column>
+		<column name="tiempo"></column>
+	</table>
+	<table catalog="bdmuni" name="detalle_pac"
+		class="com.java.beans.DetallePacDTO">
+		<column name="codDetallePac" type="int"></column>
+		<column name="objeto"></column>
+		<column name="valorRef"></column>
+		<column name="fechaConvocatoria"></column>
+	</table>
+	<table catalog="bdmuni" name="registro_formatoandexpediente"
+		class="com.java.beans.RegistroFormatoExpedienteDTO">
+		<column name="codRegistroFormatoAndExpediente" type="int"></column>
+		<column name="codFormato" type="int"></column>
+		<column name="codExpediente" type="int"></column>
+		<column name="posicion"></column>
+		<column name="aprobado"></column>
+		<column name="firmado"></column>
+		<column name="codUsuario"></column>
+	</table>
+	<table catalog="bdmuni" name="formatorequerimiento"
+		class="com.java.beans.FormatoRequerimientoDTO">
+		<column name="codFormato" type="int"></column>
+		<column name="fecha" type="String"></column>
+		<column name="tipo"></column>
+		<column name="descripcion"></column>
+		<column name="codDetallePac" type="int"></column>
+	</table>
+	<table catalog="bdmuni" name="tbusuario"
+		class="com.java.beans.UsuarioDTO">
+		<column name="codUsuario" type="int"></column>
+		<column name="nombre"></column>
+		<column name="ape_paterno" property="ape_paterno"></column>
+		<column name="ape_materno" property="ape_materno"></column>
+		<column name="usuario"></column>
+		<column name="password"></column>
+		<column name="foto"></column>
+		<column name="firma"></column>
+		<column name="codPerfil" type="int"></column>
+	</table>
+	<table catalog="bdmuni" name="actividades"
+		class="com.java.beans.ActividadesDTO">
+		<column name="codActividades"></column>
+		<column name="descripcion"></column>
+	</table>
+	<table catalog="bdmuni" name="perfil"
+		class="com.java.beans.PerfilDTO">
+		<column name="codPerfil"></column>
+		<column name="descripcion"></column>
+	</table>
+	<table catalog="bdmuni" name="expedientecompra"
+		class="com.java.beans.ExpedienteCompraDTO">
+		<column name="codExpediente" type="int"></column>
+		<column name="descripcion"></column>
+		<column name="fecha" type="String"></column>
+		<column name="codFormato" type="int"></column>
+	</table>
+	<table catalog="bdmuni" name="cuadrocomparativo"
+		class="com.java.beans.CuadroComparativoDTO">
+		<column name="codCuadroComparativo" type="int"></column>
+		<column name="url"></column>
+		<column name="fecha" type="String"></column>
+		<column name="codExpediente" type="int"></column>
+	</table>
+	<table catalog="bdmuni" name="ordencompra"
+		class="com.java.beans.OrdenCompraDTO">
+		<column name="ordencompra" type="int"></column>
+		<column name="url"></column>
+		<column name="fecha" type="String"></column>
+		<column name="codExpediente" type="int"></column>
+	</table>
+	<table catalog="bdmuni" name="menu"
+		class="com.java.beans.MenuDTO">
+		<column name="codMenu" type="int"></column>
+		<column name="descripcion"></column>
+		<column name="direccion"></column>
+		<column name="codPerfil" type="int"></column>
+	</table>
+	<table catalog="bdmuni" name="saldopresupuestal"
+		class="com.java.beans.SaldoPresupuestalDTO">
+		<column name="codSaldoPresupuestal" type="int"></column>
+		<column name="descripcion"></column>
+		<column name="cantidad"></column>
+	</table>
+	<table catalog="bdmuni" name="solicitudcotizacion_has_proveedor" class="com.java.beans.SolicitudCotizacionHasProveedorDTO">
+		<column name="codSolicitudCotizacion" type="int"></column>
+		<column name="codProveedor" type="int"></column>
+		<column name="elegido"></column>
+	</table>
+</hibernate-reverse-engineering>

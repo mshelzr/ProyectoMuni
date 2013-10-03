@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-sep-2013 3:08:08 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.java.beans.SolicitudCotizacionDTO" table="solicitudcotizacion" catalog="bdmuni">
+        <id name="codSolicitudCotizacion" type="int">
+            <column name="codSolicitudCotizacion" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="expedienteCompraDTO" class="com.java.beans.ExpedienteCompraDTO" fetch="select">
+            <column name="codExpediente" not-null="true" />
+        </many-to-one>
+        <property name="url" type="string">
+            <column name="url" length="100" />
+        </property>
+        <property name="fecha" type="string">
+            <column name="fecha" length="10" />
+        </property>
+        <set name="solicitudCotizacionHasProveedorDTOs" table="solicitudcotizacion_has_proveedor" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="codSolicitudCotizacion" not-null="true" />
+            </key>
+            <one-to-many class="com.java.beans.SolicitudCotizacionHasProveedorDTO" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,218 @@
+body,td,p,input,select {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+
+.menuLink{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+a.menuLink:hover{
+	text-decoration:underline;
+}
+
+h2,h3 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #090;
+}
+.tabla{
+	color: #F3F3F3;
+	bgcolor="#A9A9A9"; 
+}
+.input_text 
+{
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM: #336699 1px solid;
+    BORDER-LEFT: #336699 1px solid;
+    BORDER-RIGHT: #336699 1px solid;
+    BORDER-TOP: #336699 1px solid;
+    COLOR: #30608f;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt;
+}
+
+.basebg{
+background-color: #666666;
+color:#CCCCCC;
+}
+
+/*--------------------- 
+	Del Listado
+----------------------*/
+
+.ListadoCabecera
+{
+    background-color: #1814A9;
+    color: white;
+    font-family: Verdana, Arial;
+    font-size: 11px;
+    font-weight: bold
+    
+}
+
+.ListadoData
+{
+    background-color: white;
+    color: #1814A9;
+    font-family: Verdana, Arial;
+    font-size: 12px;
+    font-weight: bold	
+}
+
+
+/*--------------------- 
+	Para Notificaciones
+----------------------*/
+.tablaNotificacion {
+	color: #7F7F7F;
+	font: 0.8em/1.6em "Trebuchet MS",Verdana,sans-serif;
+	border-collapse: collapse
+}
+
+.tablaNotificacion,caption {
+	margin: 0 auto;
+	border-right: 1px solid #CCC;
+	border-left: 1px solid #CCC
+}
+
+ a.padeado{ 
+ margin: 7px 0; 
+ float: left; 
+ clear: left;
+ font-weight: bold;
+ text-decoration:none;
+ color: white;
+ }
+ 
+ .alert-box {
+    color:#555;
+    border-radius:10px;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:11px;
+    padding:10px 10px 10px 36px;
+    margin:10px;
+}
+
+.alert-box span {
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.error {
+    background:#ffecec url('images/error.png') no-repeat 10px 50%;
+    border:1px solid #f5aca6;
+}
+.success {
+    background:#e9ffd9 url('images/success.png') no-repeat 10px 50%;
+    border:1px solid #a6ca8a;
+}
+.warning {
+    background:#fff8c4 url('images/warning.png') no-repeat 10px 50%;
+    border:1px solid #f2c779;
+}
+.notice {
+    background:#e3f7fc url('images/notice.png') no-repeat 10px 50%;
+    border:1px solid #8ed9f6;
+}
+
+.buttons a, .buttons .buttonsp{
+    display:block;
+    float:left;
+    margin:0 7px 0 0;
+    background-color:#f5f5f5;
+    border:1px solid #dedede;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    font-size:12px;
+    line-height:130%;
+    text-decoration:none;
+    font-weight:bold;
+    color:#565656;
+    cursor:pointer;
+    padding:5px 10px 6px 7px; /* Links */
+}
+.buttons .buttonsp{
+    width:auto;
+    overflow:visible;
+    padding:4px 10px 3px 7px; /* IE6 */
+}
+.buttons .buttonsp[type]{
+    padding:5px 10px 5px 7px; /* Firefox */
+    line-height:17px; /* Safari */
+}
+*:first-child+html .buttonsp[type]{
+    padding:4px 10px 3px 7px; /* IE7 */
+}
+.buttons .buttonsp img, .buttons a img{
+    margin:0 3px -3px 0 !important;
+    padding:0;
+    border:none;
+    width:16px;
+    height:16px;
+}
+
+/* STANDARD */
+
+.buttonsp:hover, .buttons a:hover{
+    background-color:#dff4ff;
+    border:1px solid #c2e1ef;
+    color:#336699;
+}
+.buttons a:active{
+    background-color:#6299c5;
+    border:1px solid #6299c5;
+    color:#fff;
+}
+
+/* POSITIVE */
+
+.buttonsp#registrar, .buttons a#registrar{
+    color:#529214;
+	background: #dcdcdc url(images/accept.png) no-repeat scroll 5px center;
+}
+.buttons a#registrar:hover, .buttonsp#registrar:hover{
+    background-color:#E6EFC2;
+    border:1px solid #C6D880;
+    color:#529214;
+}
+.buttons a#registrar:active{
+    background-color:#529214;
+    border:1px solid #529214;
+    color:#fff;
+}
+
+/* NEGATIVE */
+
+.buttons a.negative, .buttonsp.negative{
+    color:#d12f19;
+}
+.buttons a.negative:hover, .buttonsp.negative:hover{
+    background:#fbe3e4;
+    border:1px solid #fbc2c4;
+    color:#d12f19;
+}
+.buttons a.negative:active{
+    background-color:#d12f19;
+    border:1px solid #d12f19;
+    color:#fff;
+}
+
+/* REGULAR */
+
+.buttonsp.regular, .buttons a.regular{
+    color:#336699;
+}
+.buttons a.regular:hover, .buttonsp.regular:hover{
+    background-color:#dff4ff;
+    border:1px solid #c2e1ef;
+    color:#336699;
+}
+.buttons a.regular:active{
+    background-color:#6299c5;
+    border:1px solid #6299c5;
+    color:#fff;
+}

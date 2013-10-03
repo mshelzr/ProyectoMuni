@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-sep-2013 3:08:08 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.java.beans.ProveedorDTO" table="proveedor" catalog="bdmuni">
+        <id name="codProveedor" type="int">
+            <column name="codProveedor" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" />
+        </property>
+        <property name="ruc" type="java.lang.Integer">
+            <column name="ruc" />
+        </property>
+        <property name="telefono" type="java.lang.Integer">
+            <column name="telefono" />
+        </property>
+        <property name="correo" type="string">
+            <column name="correo" length="45" />
+        </property>
+        <set name="solicitudCotizacionHasProveedorDTOs" table="solicitudcotizacion_has_proveedor" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="codProveedor" not-null="true" />
+            </key>
+            <one-to-many class="com.java.beans.SolicitudCotizacionHasProveedorDTO" />
+        </set>
+    </class>
+</hibernate-mapping>

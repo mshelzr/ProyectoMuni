@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-sep-2013 3:08:08 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.java.beans.SaldoPresupuestalDTO" table="saldopresupuestal" catalog="bdmuni">
+        <id name="codSaldoPresupuestal" type="int">
+            <column name="codSaldoPresupuestal" />
+            <generator class="identity" />
+        </id>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="45" />
+        </property>
+        <property name="cantidad" type="java.lang.Double">
+            <column name="cantidad" precision="9" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-sep-2013 3:08:08 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.java.beans.FormatoRequerimientoDTO" table="formatorequerimiento" catalog="bdmuni">
+        <id name="codFormato" type="int">
+            <column name="codFormato" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="detallePacDTO" class="com.java.beans.DetallePacDTO" fetch="select">
+            <column name="codDetallePac" not-null="true" />
+        </many-to-one>
+        <property name="fecha" type="string">
+            <column name="fecha" length="10" />
+        </property>
+        <property name="tipo" type="string">
+            <column name="tipo" length="45" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="145" />
+        </property>
+        <set name="registroFormatoExpedienteDTOs" table="registro_formatoandexpediente" inverse="true" lazy="true" fetch="select" cascade="all">
+            <key>
+                <column name="codFormato" />
+            </key>
+            <one-to-many class="com.java.beans.RegistroFormatoExpedienteDTO" />
+        </set>
+        <set name="expedienteCompraDTOs" table="expedientecompra" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="codFormato" not-null="true" />
+            </key>
+            <one-to-many class="com.java.beans.ExpedienteCompraDTO" />
+        </set>
+    </class>
+</hibernate-mapping>

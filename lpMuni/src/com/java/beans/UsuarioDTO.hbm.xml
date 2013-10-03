@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-sep-2013 3:08:08 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.java.beans.UsuarioDTO" table="tbusuario" catalog="bdmuni">
+        <id name="codUsuario" type="int">
+            <column name="codUsuario" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="perfilDTO" class="com.java.beans.PerfilDTO">
+            <column name="codPerfil" not-null="true" />
+        </many-to-one>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" />
+        </property>
+        <property name="ape_paterno" type="string">
+            <column name="ape_paterno" length="45" />
+        </property>
+        <property name="ape_materno" type="string">
+            <column name="ape_materno" length="45" />
+        </property>
+        <property name="usuario" type="string">
+            <column name="usuario" length="45" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="45" />
+        </property>
+        <property name="foto" type="binary">
+            <column name="foto" />
+        </property>
+        <property name="firma" type="binary">
+            <column name="firma" />
+        </property>
+        <set name="registroFormatoExpedienteDTOs" table="registro_formatoandexpediente" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="codUsuario" not-null="true" />
+            </key>
+            <one-to-many class="com.java.beans.RegistroFormatoExpedienteDTO" />
+        </set>
+    </class>
+</hibernate-mapping>

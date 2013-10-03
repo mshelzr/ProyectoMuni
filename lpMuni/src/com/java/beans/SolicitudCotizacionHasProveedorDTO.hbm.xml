@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-sep-2013 3:08:08 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.java.beans.SolicitudCotizacionHasProveedorDTO" table="solicitudcotizacion_has_proveedor" catalog="bdmuni">
+        <composite-id>
+            <key-many-to-one name="solicitudCotizacionDTO" column="codSolicitudCotizacion" class="com.java.beans.SolicitudCotizacionDTO"></key-many-to-one>
+            <key-many-to-one name="proveedorDTO" column="codProveedor" class="com.java.beans.ProveedorDTO"></key-many-to-one>
+        </composite-id>
+        <many-to-one name="proveedorDTO" class="com.java.beans.ProveedorDTO" update="false" insert="false" fetch="select">
+            <column name="codProveedor" not-null="true" />
+        </many-to-one>
+        <many-to-one name="solicitudCotizacionDTO" class="com.java.beans.SolicitudCotizacionDTO" update="false" insert="false" fetch="select">
+            <column name="codSolicitudCotizacion" not-null="true" />
+        </many-to-one>
+        <property name="elegido" type="string">
+            <column name="elegido" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

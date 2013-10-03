@@ -1,0 +1,12 @@
+INFO http-8080-1 com.java.seguridad.servlets.LogueoServlet - Se conectó a la bd
+INFO http-8080-1 com.java.seguridad.servlets.LogueoServlet - Se conectó a la bd
+INFO http-8080-1 com.java.seguridad.servlets.LogueoServlet - Se conectó a la bd
+INFO http-8080-1 com.java.seguridad.servlets.LogueoServlet - Se conectó a la bd
+DEBUG http-8080-1 org.jmesa.limit.LimitActionFactory - Defaulting to Page 1
+DEBUG http-8080-1 org.jmesa.core.Items - org.jmesa.limit.Limit@17ab3f0[id=table,export=<null>,rowSelect=org.jmesa.limit.RowSelect@f599d2[page=1,maxRows=6,rowEnd=6,rowStart=0,totalRows=14],filterSet=org.jmesa.limit.FilterSet@45ac89[],sortSet=org.jmesa.limit.SortSet@4262d2[]]
+INFO http-8080-1 com.java.seguridad.servlets.LogueoServlet - Se conectó a la bd
+DEBUG http-8080-1 org.jmesa.limit.LimitActionFactory - Defaulting to Page 1
+DEBUG http-8080-1 org.jmesa.core.Items - org.jmesa.limit.Limit@17d7a20[id=table,export=<null>,rowSelect=org.jmesa.limit.RowSelect@dcfce0[page=1,maxRows=6,rowEnd=6,rowStart=0,totalRows=14],filterSet=org.jmesa.limit.FilterSet@5e1210[],sortSet=org.jmesa.limit.SortSet@1f405c3[]]
+INFO http-8080-3 com.java.seguridad.servlets.LogueoServlet - Se conectó a la bd
+INFO http-8080-3 com.java.seguridad.servlets.LogueoServlet - Se conectó a la bd
+INFO http-8080-3 com.java.seguridad.servlets.LogueoServlet - Se conectó a la bd

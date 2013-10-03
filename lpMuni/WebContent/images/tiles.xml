@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+	<!-- Definimos la plantilla principal de la aplicacion -->
+	<definition name="d_bienvenida" template="/bodyLayout.jsp">
+		<put-attribute name="cabecera" value="/cabecera.jsp" />
+		<put-attribute name="menu" value="/menu.jsp" />
+		<put-attribute name="pie" value="/pie.jsp"></put-attribute>
+	</definition>
+
+<!-- 	<definition name="d_miprincipal" extends="d_bienvenida"> -->
+<!-- 		<put-attribute name="cuerpo" value="/principal1.jsp" /> -->
+<!-- 	</definition> -->
+</tiles-definitions>

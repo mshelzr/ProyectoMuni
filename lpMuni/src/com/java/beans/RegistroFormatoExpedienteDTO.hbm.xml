@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-sep-2013 3:08:08 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.java.beans.RegistroFormatoExpedienteDTO" table="registro_formatoandexpediente" catalog="bdmuni">
+        <id name="codRegistroFormatoAndExpediente" type="int">
+            <column name="codRegistroFormatoAndExpediente" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="expedienteCompraDTO" class="com.java.beans.ExpedienteCompraDTO" fetch="select">
+            <column name="codExpediente" />
+        </many-to-one>
+        <many-to-one name="usuarioDTO" class="com.java.beans.UsuarioDTO" fetch="join">
+            <column name="codUsuario" not-null="true" />
+        </many-to-one>
+        <many-to-one name="formatoRequerimientoDTO" class="com.java.beans.FormatoRequerimientoDTO" fetch="select">
+            <column name="codFormato"/>
+        </many-to-one>
+        <property name="posicion" type="java.lang.Integer">
+            <column name="posicion" />
+        </property>
+        <property name="aprobado" type="string">
+            <column name="aprobado" length="45" />
+        </property>
+        <property name="firmado" type="string">
+            <column name="firmado" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

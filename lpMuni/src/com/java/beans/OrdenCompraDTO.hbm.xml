@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-sep-2013 3:08:08 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.java.beans.OrdenCompraDTO" table="ordencompra" catalog="bdmuni">
+        <id name="ordencompra" type="int">
+            <column name="ordencompra" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="expedienteCompraDTO" class="com.java.beans.ExpedienteCompraDTO" fetch="select">
+            <column name="codExpediente" not-null="true" />
+        </many-to-one>
+        <property name="url" type="string">
+            <column name="url" length="100" />
+        </property>
+        <property name="fecha" type="string">
+            <column name="fecha" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

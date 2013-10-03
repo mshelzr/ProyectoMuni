@@ -1,0 +1,4 @@
+function validaRadio(){
+	$("#data").validate();
+}
+
