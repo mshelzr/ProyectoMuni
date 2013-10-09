@@ -50,7 +50,7 @@ public class DetallePacService implements JMesaUMLDAO {
 		detallesPac=detallePacDAO.listadoDetallePac();
 
 		webContext.setSessionAttribute("detallesPacCollection", detallesPac);
-        webContext.setSessionAttribute("lastId", detallesPac.size());
+        	webContext.setSessionAttribute("lastId", detallesPac.size());
 		return detallesPac;
 	}//fin de getBeansitos
 
